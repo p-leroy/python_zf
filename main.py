@@ -51,6 +51,7 @@ target_list = target_name.unique()
 
 #%%
 
+
 def set_axis(ax, lim=2.5):
     ax.grid()
     ax.set_aspect('equal')
@@ -61,6 +62,7 @@ def set_axis(ax, lim=2.5):
     ax.set_xlim([-lim, lim])
     ax.set_ylim([-lim, lim])
 
+
 args = {'ha': "left",
         'va': "center",
         'color': 'green',
@@ -69,7 +71,7 @@ args = {'ha': "left",
 shift = 0.1
 
 #%% alternate figure
-for target, name, scans_containing_target in targets_and_scans:
+for target, name, scans_containing_target in [targets_and_scans[1]]:
     print(target, name, scans_containing_target)
     # get the target under test, its name as a target in the scans, and the list of scans that contain it
     # for instance: physical target leica_3 is named target 2_6 in scans 0, 1 and 2
