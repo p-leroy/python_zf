@@ -10,6 +10,12 @@ matplotlib.use('Qt5Agg')
 dir_ = r"C:\Scans\Cibles Leica\Export"
 targets = os.path.join(dir_, "Cibles Leica.targets.txt")
 
+# serial numbers
+# Leica-TG-RENNES-1
+# Leica-TG-RENNES-2
+# Leica-TG-RENNES-3
+# Leica-TG-RENNES-4
+
 scans = {'1.zfs': (0, '1', 'Initial general scan'),
          '1_Selection_1.zfs': (1, '1_1', 'Initial state [extremely high]'),
          '1_Selection_2.zfs': (2, '1_2', 'Initial state [ultra high]'),

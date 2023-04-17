@@ -18,7 +18,7 @@ def set_axis(ax, lim=2.5):
     ax.set_ylim([-lim, lim])
 
 
-def build_figures(targets_and_scans, df, scans, odir, shift=0.1, colors=None):
+def build_figures(targets_and_scans, df, scans, odir, shift=0.1, colors=None, lim=2):
 
     args = {'ha': "left",
             'va': "center",
@@ -41,8 +41,6 @@ def build_figures(targets_and_scans, df, scans, odir, shift=0.1, colors=None):
 
         if 'sphere_' in target:
             lim = 0.5
-        else:
-            lim = 2
 
         f, (ax1, ax2) = plt.subplots(1, 2, gridspec_kw={'width_ratios': [5, 1]}, figsize=(10, 7))
         x_target, y_target, z_target = ((x[indexes] - np.mean(x[indexes])) * 1000,
